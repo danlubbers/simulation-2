@@ -2,27 +2,51 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+ background-color: #afd4c0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.header {
+  margin: auto;
+  padding: 1px;
+  background-color: #519872; 
+}
+
+.header-font{
   color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App-title {
-  font-size: 1.5em;
+.house-image {
+  width: 200px;
 }
 
-.App-intro {
-  font-size: large;
+.listings {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.single-listings {
+  margin: 10px;
+  width: 50vw;;
+  background-color: #999;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.house-img {
+  margin: auto;
+
+}
+
+.house-text {
+
 }
