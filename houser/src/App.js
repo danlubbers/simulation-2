@@ -7,6 +7,7 @@ import Header from './Component/Header/Header.js';
 
 import routes from './routes';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 
 
@@ -27,5 +28,12 @@ class App extends Component {
     );
   }
 }
+
+// Commented out cause I broke it right before 5pm
+// function mapStatetoProps(state) {
+//   return {state}  
+// }
+
+// export default connect(mapStatetoProps)(App);
 
 export default App;

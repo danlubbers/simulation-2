@@ -12,17 +12,22 @@ export default class Dashboard extends Component {
             houses: []
         };
 
-        this.deleteHouse = this.deleteHouse.bind(this)
+        this.deleteHouse = this.deleteHouse.bind(this);
+        this.getAllHouses = this.getAllHouses.bind(this);
     }
     
-   componentDidMount() {
+    componentDidMount() {
        axios.get(`/api/getAllHouses`).then(res => {
            this.setState({
                houses: res.data
            })
            console.log(res.data)
        })
-   }
+    }
+
+    getAllHouses(){
+        return this.componentDidMount();
+    }
 
     deleteHouse(id) {
         axios.delete(`/api/deleteHouse/${id}`).then(res=> {
