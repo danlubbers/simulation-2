@@ -53,11 +53,21 @@ export default class Wizard extends Component {
                 </div>
 
                 <div className="inputBtns">
-                    <input className="" value={this.state.name} onChange={e=>{this.inputName(e.target.value)}} placeholder=""/>
-                    <input className="" value={this.state.address} onChange={e=>{this.inputAddress(e.target.value)}} placeholder=""/>
-                    <input className="" value={this.state.city} onChange={e=>{this.inputCity(e.target.value)}} placeholder=""/>
-                    <input className="" value={this.state.state} onChange={e=>{this.inputState(e.target.value)}} placeholder=""/>
-                    <input className="" value={this.state.zip} onChange={e=>{this.inputZip(e.target.value)}} placeholder=""/>
+
+                    <h3>Property Name:</h3>
+                    <input className="inputName" value={this.state.name} onChange={e=>{this.inputName(e.target.value)}} placeholder=""/>
+
+                    <h3>Address:</h3>
+                    <input className="inputAddress" value={this.state.address} onChange={e=>{this.inputAddress(e.target.value)}} placeholder=""/>
+                    
+                    <h3>City:</h3>
+                    <input className="inputCity" value={this.state.city} onChange={e=>{this.inputCity(e.target.value)}} placeholder=""/>
+
+                    <h3>State:</h3>
+                    <input className="inputState" value={this.state.state} onChange={e=>{this.inputState(e.target.value)}} placeholder=""/>
+
+                    <h3>Zip:</h3>
+                    <input className="inputZip" value={this.state.zip} onChange={e=>{this.inputZip(e.target.value)}} placeholder=""/>
                 </div>
                 <div className="completeBtn">
                     <button className="addhouseBtn" onClick={this.addHouse(this.state.name, this.state.address, this.state.city, this.state.state, this.state.zip)}>Complete</button>

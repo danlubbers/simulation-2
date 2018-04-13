@@ -33,7 +33,7 @@ body {
 .single-listings {
   margin: 10px;
   width: 50vw;;
-  background-color: #999;
+  background-color: #dedede;
   display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -43,10 +43,30 @@ body {
 }
 
 .house-img {
-  margin: auto;
-
+  margin: auto; 
 }
 
-.house-text {
+h5 {
+  margin: auto;
+  padding: 2px;
+}
 
+.inputName {
+  width: 200px;  
+}
+
+.inputAddress {
+  width: 250px;
+}
+
+.inputCity {
+  width: 150px;
+}
+
+.inputState {
+  width: 25px;
+}
+
+.inputZip {
+  width: 75px;
 }
