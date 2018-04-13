@@ -13,9 +13,9 @@ app.use(bodyParser.json());
 // app.use(cors());
 
 app.get(`/api/getAllHouses`, controller.read);
-app.post(`/api/`, controller.create);
+app.post(`/api/addHouse`, controller.create);
 app.put(`/api/`, controller.update);
-app.delete(`/api/`, controller.delete);
+app.delete(`/api/deleteHouse/:id`, controller.delete);
 
 console.log(config.CONNECTION_STRING());
 massive(config.CONNECTION_STRING()).then(connection => {

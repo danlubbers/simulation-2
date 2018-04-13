@@ -15,14 +15,14 @@ class App extends Component {
     return (
       <div className="App">
         <div><Header /></div>
-        <Link to="/"> 
-          <p>Dashboard</p>
-        </Link>
-        <Link to="/Wizard"> 
-          <p>Wizard</p>
-        </Link>
+          <Link to="/"> 
+            <p>Dashboard</p>
+          </Link>
+          <Link to="/Wizard"> 
+            <p>Wizard</p>
+          </Link>
 
-        {routes}
+          {routes}
       </div>
     );
   }
