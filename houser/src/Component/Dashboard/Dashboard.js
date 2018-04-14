@@ -30,27 +30,30 @@ export default class Dashboard extends Component {
     }
 
     deleteHouse(id) {
+        console.log('delete it NOW!')
         axios.delete(`/api/deleteHouse/${id}`).then(res=> {
-            this.setState({houses: res.data})
-        })
+            let newHouseList = this.state.house.splice(id, 1);
+            this.setState({houses: newHouseList})
+            
+        });
+        console.log('FINALLY DELETED')
+        this.componentDidMount();
     }
 
     render() {
         let housesArray = this.state.houses.map((element, index)=>{
             return(
-                <div key={index} className="listings"> 
+                <div className="listings"> 
                     <div  className="single-listings">
-                        <img className="house-image" src={element.img} alt="house" />
-                        <div className="house-text"></div>
-                        <h5>{element.name}</h5>
-                        <h5>{element.address}</h5>
-                        <h5>{element.city}</h5>
-                        <h5>{element.state}</h5>
-                        <h5>{element.zip}</h5>
-
-                    <div>
-                        <button className="deleteBtn" onClick={_=> this.deleteHouse(element.id)}>Delete</button>
-                    </div>
+                        <House key={index} 
+                        img={element.img}
+                        name={element.name}
+                        address={element.address}
+                        city={element.city}
+                        state={element.state}
+                        zip={element.zip}
+                        delete={_=> this.deleteHouse(element.id)}
+                        />
 
                     </div>
                    
@@ -60,7 +63,7 @@ export default class Dashboard extends Component {
         return(
             <div className="dashboard">
             <Link to="/Wizard"><button className="newPropertyBtn">Add New Property</button></Link>
-                <div><House /></div>
+                
                 <h2>Home Listings</h2>
                 <div>{housesArray}</div>
             </div>
