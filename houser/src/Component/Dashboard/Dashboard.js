@@ -61,10 +61,12 @@ export default class Dashboard extends Component {
             )
         })
         return(
-            <div className="dashboard">
-            <Link to="/Wizard"><button className="newPropertyBtn">Add New Property</button></Link>
-                
-                <h2>Home Listings</h2>
+            <div className="house-listings">
+                <div className="dashboard"> 
+                    <h2 className="dashboard-text">Dashboard</h2> 
+                    <Link to="/Wizard"><button className="newPropertyBtn">Add New Property</button></Link>      
+            </div>
+                <h4 className="house-listings-text">Home Listings</h4>
                 <div>{housesArray}</div>
             </div>
         )

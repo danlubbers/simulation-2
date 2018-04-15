@@ -15,14 +15,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div><Header /></div>
-          <Link to="/"> 
-            <p>Dashboard</p>
-          </Link>
-          <Link to="/Wizard"> 
-            <p>Wizard</p>
-          </Link>
-
+        <div><Header /></div> 
+          {/* <div className="dashboard"> 
+            <h2 className="dashboard-text">Dashboard</h2> 
+            <Link to="/Wizard"><button className="newPropertyBtn">Add New Property</button></Link>      
+          </div> */}
           {routes}
       </div>
     );
@@ -30,8 +27,10 @@ class App extends Component {
 }
 
 // Commented out cause I broke it right before 5pm
-function mapStatetoProps(state) {
-  return {state}  
-}
+// function mapStatetoProps(state) {
+//   return {state}  
+// }
 
-export default connect(mapStatetoProps)(App);
+// export default connect(mapStatetoProps)(App);
+
+export default App;

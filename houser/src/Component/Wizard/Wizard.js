@@ -46,14 +46,12 @@ export default class Wizard extends Component {
 
     render() {
         return(
-            <div className="Wizard">
-                <div className="listing">
-                    <h1>Add New Listing</h1>
+            <div className="wizard"> 
+                <div className="wizard-header">
+                    <h1 className="add-new-text">Add New Listing</h1>
                     <Link to="/"><button className="cancelBtn">Cancel</button></Link>
                 </div>
-
                 <div className="inputBtns">
-
                     <h3>Property Name:</h3>
                     <input className="inputName" value={this.state.name} onChange={e=>{this.inputName(e.target.value)}} placeholder=""/>
 

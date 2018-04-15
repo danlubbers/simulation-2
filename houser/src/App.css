@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* background-color: purple; */
 }
 
 body {
@@ -28,8 +29,43 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.dashboard {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+  align-content: stretch;
+  /* background-color: yellow; */
+}
+
+.dashboard-text {
+  margin: 15px;
+  padding: 0px;
+  font-size: 2.5em;
+  letter-spacing: .3rem;
+
+}
+
 .house-image {
   width: 200px;
+}
+
+.house-listings {
+  margin: auto;
+  width: 75vw;
+  background-color: #e5f4ec;
+}
+
+.house-listings-text {
+  margin: auto;
+  padding: 20px;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
 }
 
 .listings {
@@ -66,6 +102,13 @@ h5 {
 h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif;
 }
+
+.wizard {
+  margin: auto;
+  width: 75vw;
+  background-color: #e5f4ec;
+}
+
 .inputName {
   width: 200px;  
 }
@@ -86,14 +129,46 @@ h1, h2, h3, h4, h5 {
   width: 75px;
 }
 
-.cancelBtn {
-  background: #fec2c2;
-  border-radius: 5px;
-}
 .addHouseBtn {
   margin: 10px;
   height: 40px;
   width: 90px;
   background: #8aea92;
   border-radius: 5px;
+}
+
+.newPropertyBtn {
+  margin: 23px;
+  background: #8aea92;
+  width: 150px;
+  height: 30px;
+  font-size: 1em;
+  padding: 1px 0px 0px 0px;
+}
+
+.newPropertyBtn:hover {
+  background: #666;
+  transition: .5s;
+  
+}
+
+.wizard-header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.add-new-text {
+  display: flex;
+  margin: 10px 0px 0px 15px;
+}
+         
+.cancelBtn {
+  margin: 20px 20px 0px 0px;
+  background: #fec2c2;
+  border-radius: 5px;
+  width: 75px;
+  height: 30px;
+  font-size: 1em;
+  padding: 1px 0px 0px 0px;
 }
