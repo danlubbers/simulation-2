@@ -43,16 +43,16 @@ export default class Dashboard extends Component {
     render() {
         let housesArray = this.state.houses.map((element, index)=>{
             return(
-                <div className="listings"> 
-                    <div  className="single-listings">
-                        <House key={index} 
-                        img={element.img}
-                        name={element.name}
-                        address={element.address}
-                        city={element.city}
-                        state={element.state}
-                        zip={element.zip}
-                        delete={_=> this.deleteHouse(element.id)}
+                <div key={index} className="listings"> 
+                    <div className="single-listings">
+                        <House 
+                            img={element.img}
+                            name={element.name}
+                            address={element.address}
+                            city={element.city}
+                            state={element.state}
+                            zip={element.zip}
+                            delete={_=> this.deleteHouse(element.id)}
                         />
 
                     </div>

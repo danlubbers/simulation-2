@@ -8,10 +8,9 @@ module.exports = {
 
     create: (req, res) => {
         const dbInstance = req.app.get('db')
-
         const {name, address, city, state, zip} = req.body;
 
-        dbInstance.addHouse([name, address, city, state, zip]).then(house=>res.status(200).send(house))
+        dbInstance.addHouse([name, address, city, state, zip, 'asfd', 233, 434]).then(house=>res.status(200).send(house))
     },
 
     update: (req, res) => {

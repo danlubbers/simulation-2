@@ -30,10 +30,8 @@ class App extends Component {
 }
 
 // Commented out cause I broke it right before 5pm
-// function mapStatetoProps(state) {
-//   return {state}  
-// }
+function mapStatetoProps(state) {
+  return {state}  
+}
 
-// export default connect(mapStatetoProps)(App);
-
-export default App;
+export default connect(mapStatetoProps)(App);
