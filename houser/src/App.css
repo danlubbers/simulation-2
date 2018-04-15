@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5 {
 .wizard {
   margin: auto;
   width: 75vw;
+  height: 50vh;
   background-color: #e5f4ec;
 }
 
@@ -147,7 +148,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .newPropertyBtn:hover {
-  background: #666;
+  background: #e5f4ec;
   transition: .5s;
   
 }

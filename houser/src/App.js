@@ -6,8 +6,8 @@ import './App.css';
 import Header from './Component/Header/Header.js';
 
 import routes from './routes';
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
+// import {Link} from 'react-router-dom';
+// import {connect} from 'react-redux';
 
 
 

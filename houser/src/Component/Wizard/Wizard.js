@@ -67,6 +67,11 @@ export default class Wizard extends Component {
                     <h3>Zip:</h3>
                     <input className="inputZip" value={this.state.zip} onChange={e=>{this.inputZip(e.target.value)}} placeholder=""/>
                 </div>
+
+                <div className="nextStepBtn2">
+                    <Link to="/Wizard2"><button>Next Step</button></Link>
+                </div>
+            
                 <div className="completeBtn">
                     <button className="addHouseBtn" onClick={() => this.addHouse(this.state.name, this.state.address, this.state.city, this.state.state, this.state.zip)}>Complete</button>
                 </div>
