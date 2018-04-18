@@ -8,12 +8,17 @@ body {
  background-color: #afd4c0;
 }
 
-/* 25F */
+/* 25F 23E */
+/* 25C-1 */
 .header {
   margin: auto;
+  /* background-image is only in here for competencies */
+  background-image: url('https://www.detail-online.com/fileadmin/user_upload/Gerahmte_Aussicht_PauldeRuiter-VillaK-Thueringen-PieterKers-Teaser-1500.jpg');
+  background-position: center;
   background-color: #519872;
   width: 100%;
   display: inline-block;
+  position: relative;
 
 }
 
@@ -25,11 +30,13 @@ body {
   width: 40px;
 }
 
-/* 23D-2 */
+/* 23D-1, 23D-2. 23D-3 */
 .header-font{
   padding: 0px 0px 0px 15px;
   float: left;
   color: white;
+  font-weight: bold;
+  font-size: 2em;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -44,13 +51,16 @@ body {
   /* background-color: yellow; */
 }
 
-/* 24C, 24E */
+/* 24C, 24d, 24E, 24F*/
 /* 23D-3 */
 .dashboard-text {
   margin: 15px;
   padding: 0px;
+  border: none;
+  box-sizing: border-box;
   font-size: 2.5em;
   letter-spacing: .3rem;
+  
 
 }
 
@@ -73,7 +83,7 @@ body {
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: center;
-	align-content: stretch;
+  align-content: stretch;
 }
 
 .listings {
