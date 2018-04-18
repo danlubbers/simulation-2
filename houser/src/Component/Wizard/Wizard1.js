@@ -17,6 +17,8 @@ class Wizard1 extends Component {
         };
     }
 
+    // needs Componentdid mount and handlechange
+
     inputName(name) {
         this.setState({name: name});
     }

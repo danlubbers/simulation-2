@@ -20,6 +20,7 @@ const UPDATE_IMG = 'UPDATE_IMG';
 const UPDATE_MORTGAGE = 'UPDATE_MORTGAGE';
 const UPDATE_RENT = 'UPDATE_RENT';
 
+// This method is invoked in the Wizard1 input field.
 export function updateName(name) {
     return {
         type: UPDATE_NAME,
@@ -55,6 +56,7 @@ export function updateZip(zip) {
     }
 }
 
+// // This method is invoked in the Wizard2 input field.
 export function updateImg(img) {
     return {
         type: UPDATE_NAME,
@@ -62,6 +64,7 @@ export function updateImg(img) {
     }
 }
 
+// // This method is invoked in the Wizard3 input field.
 export function updateMortgage(mortgage) {
     return {
         type: UPDATE_MORTGAGE,

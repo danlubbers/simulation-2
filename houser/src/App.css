@@ -3,10 +3,12 @@
   /* background-color: purple; */
 }
 
+/* 23E */
 body {
  background-color: #afd4c0;
 }
 
+/* 25F */
 .header {
   margin: auto;
   background-color: #519872;
@@ -15,6 +17,7 @@ body {
 
 }
 
+/* 25D */
 .logo {
   float: left;
   margin: auto;
@@ -22,6 +25,7 @@ body {
   width: 40px;
 }
 
+/* 23D-2 */
 .header-font{
   padding: 0px 0px 0px 15px;
   float: left;
@@ -29,6 +33,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* ID 27G, 27F, 27E 27D, 27C */
 .dashboard {
   display: flex;
 	flex-direction: row;
@@ -39,6 +44,8 @@ body {
   /* background-color: yellow; */
 }
 
+/* 24C, 24E */
+/* 23D-3 */
 .dashboard-text {
   margin: 15px;
   padding: 0px;
@@ -148,6 +155,7 @@ h1, h2, h3, h4, h5 {
   width: 75px;
 }
 
+/* 24D */
 .addHouseBtn {
   margin: 10px;
   height: 40px;
@@ -165,6 +173,7 @@ h1, h2, h3, h4, h5 {
   padding: 1px 0px 0px 0px;
 }
 
+/* 26H 28D*/
 .newPropertyBtn:hover {
   background: #e5f4ec;
   transition: .5s;
