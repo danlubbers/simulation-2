@@ -64,10 +64,10 @@ export default class Dashboard extends Component {
             <div className="house-listings">
                 <div className="dashboard"> 
                     <h2 className="dashboard-text">Dashboard</h2> 
-                    <Link to="/Wizard"><button className="newPropertyBtn">Add New Property</button></Link>      
+                    <Link to="/Wizard/Wizard1"><button className="newPropertyBtn">Add New Property</button></Link>      
             </div>
                 <h4 className="house-listings-text">Home Listings</h4>
-                <div>{housesArray}</div>
+                <div className="houses-array">{housesArray}</div>
             </div>
         )
     }

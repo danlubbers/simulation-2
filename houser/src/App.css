@@ -55,6 +55,7 @@ body {
   margin: auto;
   width: 75vw;
   background-color: #e5f4ec;
+  
 }
 
 .house-listings-text {
@@ -79,24 +80,41 @@ body {
 
 .single-listings {
   margin: 10px;
-  width: 50vw;;
+  width: 65vw;
   background-color: #dedede;
-  display: flex;
+  /* display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: stretch; */
+}
+
+.house-box {
+  /* background-color: yellow; */
+  float: left;
 }
 
 .house-image {
-  margin: 10px; 
+  margin: 22px; 
+}
+
+.house-text {
+  /* background-color: purple; */
+  margin-top: 10px;
+  float: left;
 }
 
 h5 {
-  margin: auto;
-  padding: 2px;
+  margin: 10px;
   font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.delete-box {
+  margin: 10px;
+  float: right;
 }
 
 h1, h2, h3, h4, h5 {
