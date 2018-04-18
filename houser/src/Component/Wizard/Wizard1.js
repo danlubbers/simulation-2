@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import {wizard1} from '../../ducks/reducer';
 // import axios from 'axios';
 
 class Wizard1 extends Component {
@@ -17,7 +18,11 @@ class Wizard1 extends Component {
         };
     }
 
-    // needs Componentdid mount and handlechange
+    // Takes name, address, etc from reducer and puts it into the state to show on site.
+    componentDidMount() {
+        const {name, address, city, state, zip} = this.props;
+        this.setState({name, address, city, state, zip})
+    }
 
     inputName(name) {
         this.setState({name: name});
@@ -61,7 +66,7 @@ class Wizard1 extends Component {
                 </div>
 
                 <div className="nextStepBtn2">
-                    <Link to="/Wizard/Wizard2"><button>Next Step</button></Link>
+                    <Link to="/Wizard/Wizard2"><button onClick={_=>this.props.wizard1(this.state.name, this.state.address, this.state.city, this.state.state, this.state.zip)}>Next Step</button></Link>
                 </div>
             
                 
@@ -76,6 +81,6 @@ function mapStateToProps(param) {
     const {name, address, city, state, zip} = param;
     return {name, address, city, state, zip};
 }
-
-export default connect(mapStateToProps)(Wizard1)
+// This attaches {wizard1} to props, to invoke. use this.props.wizard1
+export default connect(mapStateToProps, {wizard1} )(Wizard1)
 
