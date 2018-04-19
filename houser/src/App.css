@@ -62,8 +62,6 @@ body {
   font-size: 2.5em;
   letter-spacing: .3rem;
   text-shadow: rgba(21, 21, 21, 0.5) 0px 3px 3px;
-  
-
 }
 
 .house-image {
@@ -124,6 +122,12 @@ body {
   float: left;
 }
 
+.mortgage-text {
+  /* background-color: yellow; */
+  float: left;
+  margin-top: 10px;
+}
+
 h5 {
   margin: 10px;
   font-family: 'Open Sans', sans-serif;
@@ -165,6 +169,10 @@ h1, h2, h3, h4, h5 {
 
 .inputZip {
   width: 75px;
+}
+
+.inputImage {
+  width: 450px;
 }
 
 /* 24D */

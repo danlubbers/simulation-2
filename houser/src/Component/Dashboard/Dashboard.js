@@ -52,6 +52,8 @@ export default class Dashboard extends Component {
                             city={element.city}
                             state={element.state}
                             zip={element.zip}
+                            mortgage={element.mortgage}
+                            rent={element.rent}
                             delete={_=> this.deleteHouse(element.id)}
                         />
 

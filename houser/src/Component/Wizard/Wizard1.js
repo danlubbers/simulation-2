@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {wizard1} from '../../ducks/reducer';
-// import axios from 'axios';
 
 class Wizard1 extends Component {
     constructor() {

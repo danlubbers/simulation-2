@@ -2,15 +2,22 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import {wizard3} from '../../ducks/reducer';
 
 class Wizard3 extends Component {
     constructor() {
         super();
 
         this.state = {
+            houses: [],
             mortgage: '',
             rent: ''
         };
+    }
+
+    componentDidMount() {
+        const {mortgage, rent} = this.props;
+        this.setState({mortgage, rent})
     }
 
     inputMortgage(newMortgage) {
@@ -21,8 +28,8 @@ class Wizard3 extends Component {
         this.setState({rent: newRent});
     }
 
-    addHouse(name, address, city, state, zip) {
-        axios.post(`/api/addHouse`, {name: name, address: address, city: city, state: state, zip: zip}).then(res => {
+    addHouse(name, address, city, state, zip, img, mortgage, rent) {
+        axios.post(`/api/addHouse`, {name: name, address: address, city: city, state: state, zip: zip, img: img, mortgage: mortgage, rent: rent}).then(res => {
             console.log(res.data)
             this.setState({houses: res.data})
         })
@@ -46,7 +53,7 @@ class Wizard3 extends Component {
                 </div>
 
                 <div className="completeBtn">
-                    <button className="addHouseBtn" onClick={() => this.addHouse(this.state.name, this.state.address, this.state.city, this.state.state, this.state.zip)}>Complete</button>
+                    <button className="addHouseBtn" onClick={() => this.addHouse(this.props.name, this.props.address, this.props.city, this.props.state, this.props.zip, this.props.img, this.state.mortgage, this.state.rent)}>Complete</button>
                 </div>
 
             </div>
@@ -55,8 +62,8 @@ class Wizard3 extends Component {
 }
 
 function mapStateToProps(param) {
-    const {mortgage, rent} = param;
-    return {mortgage, rent};
+    const {name, address, city, state, zip, img, mortgage, rent} = param;
+    return {name, address, city, state, zip, img, mortgage, rent};
 }
 
-export default connect(mapStateToProps)(Wizard3)
+export default connect(mapStateToProps, {wizard3} )(Wizard3)

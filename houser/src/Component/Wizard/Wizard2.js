@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import {wizard2} from '../../ducks/reducer';
 
 class Wizard2 extends Component {
     constructor() {
@@ -9,32 +10,38 @@ class Wizard2 extends Component {
 
         this.state = {
             houses: [],
-            image: ''
+            img: ''
         };
     }
 
-    inputImage(newImage) {
-        this.setState({image: newImage});
+    componentDidMount() {
+        const {img} = this.props; 
+        this.setState({img})
     }
 
-    addImage(image) {
-        axios.post(`api/addHouse`, {image: image}).then(res => {
-            this.setState({houses: res.data})
-        })
+    inputImage(newImage) {
+        this.setState({img: newImage});
     }
+
+    // addImage(image) {
+    //     axios.post(`api/addHouse`, {image: image}).then(res => {
+    //         this.setState({houses: res.data})
+    //     })
+    // }
 
     render() {
+        console.log(this.props);
         return(
             <div className="wizard">
                 <div className="wizard2-header">
                     <h3>Image URL</h3>
-                    <input className="inputImage" value={this.state.image} onChange={e=>{this.inputImage(e.target.value)}}/> 
+                    <input className="inputImage" value={this.state.img} onChange={e=>{this.inputImage(e.target.value)}}/> 
                 </div>
                 <div className="previousBtn">
                    <Link to="/Wizard/Wizard1"><button>Previous Step</button></Link>
                 </div>
                 <div className="nextStepBtn3">
-                    <Link to="/Wizard/Wizard3"><button>Next Step</button></Link>
+                    <Link to="/Wizard/Wizard3"><button onClick={_=>this.props.wizard2(this.state.img)}>Next Step</button></Link>
                 </div>
             </div>
         )
@@ -46,4 +53,4 @@ function mapStateToProps(param) {
     return {img};
 }
 
-export default connect(mapStateToProps)(Wizard2)
+export default connect(mapStateToProps, {wizard2} )(Wizard2)
