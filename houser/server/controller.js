@@ -8,9 +8,9 @@ module.exports = {
 
     create: (req, res) => {
         const dbInstance = req.app.get('db')
-        const {name, address, city, state, zip, image, mortgage, rent} = req.body;
+        const {name, address, city, state, zip, img, mortgage, rent} = req.body;
 
-        dbInstance.addHouse([name, address, city, state, zip, image, mortgage, rent]).then(house=>res.status(200).send(house))
+        dbInstance.addHouse([name, address, city, state, zip, img, mortgage, rent]).then(house=>res.status(200).send(house))
     },
 
     update: (req, res) => {
@@ -21,7 +21,7 @@ module.exports = {
         const dbInstance = req.app.get('db')
 
         dbInstance.deleteHouse([req.params.id]).then(house=>{
-            re.status(200).send(house)
+            re.status(200).send(house).catch(err => {console.log(err)})
         })
     }
 }

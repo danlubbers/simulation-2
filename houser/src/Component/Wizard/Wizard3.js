@@ -29,9 +29,10 @@ class Wizard3 extends Component {
     }
 
     addHouse(name, address, city, state, zip, img, mortgage, rent) {
+        console.log(img)
         axios.post(`/api/addHouse`, {name: name, address: address, city: city, state: state, zip: zip, img: img, mortgage: mortgage, rent: rent}).then(res => {
-            console.log(res.data)
-            this.setState({houses: res.data})
+            // this redirects you through redux back to the home page/dashboard
+            this.props.history.push('/')
         })
     }
 
